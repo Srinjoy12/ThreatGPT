@@ -8,6 +8,6 @@ export default defineConfig({
   dbCredentials: {
     url: process.env.DATABASE_URL!
   },
-  schema: "./sections/2-create-a-rag-system/db/schema",
-  out: "./sections/2-create-a-rag-system/db/migrations"
+  schema: "./db/schema",
+  out: "./db/migrations"
 });

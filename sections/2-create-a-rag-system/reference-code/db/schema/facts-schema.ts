@@ -1,11 +1,10 @@
 import { index, pgTable, serial, text, timestamp, vector } from "drizzle-orm/pg-core";
-import { documentsTable } from "../../../1-learn-the-basics/db/schema/documents-schema";
 
 export const factsTable = pgTable(
   "facts",
   {
     id: serial("id").primaryKey(),
-    subject: text("subject").notNull(),
+    name: text("name").notNull(),
     content: text("content").notNull(),
     embedding: vector("embedding", {
       dimensions: 256
@@ -18,5 +17,5 @@ export const factsTable = pgTable(
   })
 );
 
-export type InsertDocuments = typeof documentsTable.$inferInsert;
-export type SelectDocuments = typeof documentsTable.$inferSelect;
+export type InsertFacts = typeof factsTable.$inferInsert;
+export type SelectFacts = typeof factsTable.$inferSelect;

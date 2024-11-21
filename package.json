@@ -6,11 +6,7 @@
   "main": "index.js",
   "scripts": {
     "db:generate:basics": "npx drizzle-kit generate --config=./sections/1-learn-the-basics/drizzle.config.ts",
-    "db:migrate:basics": "npx drizzle-kit migrate --config=./sections/1-learn-the-basics/drizzle.config.ts",
-    "db:generate:system": "npx drizzle-kit generate --config=./sections/2-create-a-rag-system/drizzle.config.ts",
-    "db:migrate:system": "npx drizzle-kit migrate --config=./sections/2-create-a-rag-system/drizzle.config.ts",
-    "db:generate:project": "npx drizzle-kit generate --config=./sections/3-build-a-retrieval-project/drizzle.config.ts",
-    "db:migrate:project": "npx drizzle-kit migrate --config=./sections/3-build-a-retrieval-project/drizzle.config.ts"
+    "db:migrate:basics": "npx drizzle-kit migrate --config=./sections/1-learn-the-basics/drizzle.config.ts"
   },
   "author": "Mckay Wrigley",
   "license": "MIT",
