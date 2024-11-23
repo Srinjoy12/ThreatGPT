@@ -1,7 +1,7 @@
 import { index, pgTable, serial, text, timestamp, vector } from "drizzle-orm/pg-core";
 
-export const dataTable = pgTable(
-  "data",
+export const documentsTable = pgTable(
+  "documents",
   {
     id: serial("id").primaryKey(),
     content: text("content").notNull(),
@@ -16,5 +16,5 @@ export const dataTable = pgTable(
   })
 );
 
-export type InsertData = typeof dataTable.$inferInsert;
-export type SelectData = typeof dataTable.$inferSelect;
+export type InsertDocument = typeof documentsTable.$inferInsert;
+export type SelectDocument = typeof documentsTable.$inferSelect;

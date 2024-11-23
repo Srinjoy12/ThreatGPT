@@ -2,8 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { generateCompletion } from "@/lib/ai/generate-completion";
-import { runRetrievalPipeline } from "@/lib/rag/retrieval/run-retrieval-pipeline";
+import { generateCompletionWithContext } from "@/lib/rag/generation/generate-completion";
+import { runRagPipeline } from "@/lib/rag/retrieval/run-rag-pipeline";
 import { useState } from "react";
 
 export default function AiChat() {
@@ -19,11 +19,11 @@ export default function AiChat() {
     setCurrentDocs([]);
 
     try {
-      const relevantDocs = await runRetrievalPipeline(input);
+      const relevantDocs = await runRagPipeline(input);
       const context = relevantDocs.map((doc) => doc.content).join("\n\n");
 
       setCurrentDocs(relevantDocs.map((doc) => doc.content));
-      const answer = await generateCompletion(context, input);
+      const answer = await generateCompletionWithContext(context, input);
 
       setMessages((prev) => [
         ...prev,
@@ -103,6 +103,7 @@ export default function AiChat() {
           </>
         ))}
       </div>
+
       <div className="flex">
         <Input
           className="flex-grow mr-2"

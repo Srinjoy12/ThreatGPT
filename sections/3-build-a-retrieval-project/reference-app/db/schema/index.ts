@@ -1,1 +1,1 @@
-export * from "./data-schema";
+export * from "./documents-data";

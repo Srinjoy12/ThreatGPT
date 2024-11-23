@@ -7,6 +7,7 @@ export default function Home() {
       <div className="flex-1 pr-4">
         <DocumentUploader />
       </div>
+
       <div className="flex-1 pl-4">
         <AiChat />
       </div>

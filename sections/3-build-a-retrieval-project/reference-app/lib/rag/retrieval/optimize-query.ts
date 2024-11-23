@@ -19,7 +19,16 @@ export async function getOptimizedQuery(query: string) {
     4. Ensure the query is clear and concise.
     5. Maintain the original intent of the query.
     
-    Output only the refined query text, without any additional explanation or formatting, on a single line:`
+    Output only the refined query text, without any additional explanation or formatting, on a single line.
+    
+    Examples:
+    - "What is the capital of France?" -> "France capital"
+    - "Explain the main points of the book '1984' by George Orwell" -> "'1984' George Orwell main points"
+    - "What is the weather in Tokyo?" -> "Tokyo weather"
+    - "Who painted the Mona Lisa?" -> "Mona Lisa painter"
+    - "Location of the Great Wall of China" -> "Great Wall of China location"
+    - "Show me the latest news about the iPhone" -> "iPhone latest news"
+    `
       },
       { role: "user", content: query } // Pass original query as user message
     ]

@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { processData } from "@/lib/rag/processing/process-data";
+import { processDocument } from "@/lib/rag/processing/process-document";
 import { useState } from "react";
 
 export default function DocumentUploader() {
@@ -10,7 +10,7 @@ export default function DocumentUploader() {
 
   const handleUpload = async () => {
     try {
-      await processData(document);
+      await processDocument(document);
       setDocument("");
     } catch (error) {
       console.error("Error processing document:", error);
