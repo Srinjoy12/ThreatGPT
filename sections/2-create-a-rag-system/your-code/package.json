@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "tsx index.ts",
-    "db:generate": "npx drizzle-kit generate",
+    "db:generate": "npx drizzle-kit generate:pg",
     "db:migrate": "npx drizzle-kit migrate"
   },
   "author": "",
@@ -15,9 +15,15 @@
     "cohere-ai": "^7.14.0",
     "dotenv": "^16.4.5",
     "drizzle-kit": "^0.28.1",
-    "drizzle-orm": "^0.36.3",
+    "drizzle-orm": "^0.41.0",
     "openai": "^4.73.0",
     "postgres": "^3.4.5",
     "tsx": "^4.19.2"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.1"
+  },
+  "overrides": {
+    "esbuild": "^0.25.1"
   }
 }
