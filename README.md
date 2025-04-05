@@ -1,5 +1,5 @@
 Demo Video of the project
-[https://drive.google.com/file/d/1U5AtTWFAetYW8UPvcfh5s1HG83hpvl9s/view?usp=sharing](url)
+https://drive.google.com/file/d/1U5AtTWFAetYW8UPvcfh5s1HG83hpvl9s/view?usp=drive_link
 
 
 <img width="1458" alt="Image" src="https://github.com/user-attachments/assets/7a531eb6-1882-458c-a5bc-77ed5785bfe9" />
