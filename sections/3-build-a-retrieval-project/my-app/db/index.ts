@@ -17,7 +17,17 @@ const dbSchema = {
 };
 
 function initializeDb(url: string) {
-  const client = postgres(url, { prepare: false });
+  const client = postgres(url, { 
+    max: 10, // Increased connection pool size
+    connect_timeout: 30, // 30 second connection timeout
+    idle_timeout: 30, // 30 second idle timeout
+    max_lifetime: 60 * 30, // 30 minutes max lifetime
+    ssl: 'require', // Force SSL
+    prepare: false,
+    connection: {
+      application_name: 'rag-application'
+    }
+  });
   return drizzle(client, { schema: dbSchema });
 }
 
